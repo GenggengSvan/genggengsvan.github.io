@@ -80,27 +80,9 @@ footer {
 }
 
 .brand {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
   font-family: "Source Serif 4", Georgia, serif;
   font-weight: 700;
   text-decoration: none;
-}
-
-.brand-mark {
-  height: 32px;
-  display: inline-grid;
-  place-items: center;
-  padding: 0 12px;
-  border-radius: 9px;
-  background: var(--accent);
-  color: #fffdf8;
-  font-family: "DM Sans", sans-serif;
-  font-size: 0.72rem;
-  font-weight: 700;
-  letter-spacing: 0.04em;
-  box-shadow: var(--shadow-sm);
 }
 
 .nav-links {
@@ -128,10 +110,8 @@ footer {
 
 .hero {
   min-height: 460px;
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
+  display: flex;
   align-items: center;
-  gap: 64px;
   padding: 96px 0 88px;
   border-bottom: 1px solid var(--border);
 }
@@ -165,51 +145,6 @@ h1 {
 
 .affiliation:hover {
   color: var(--accent-hover);
-}
-
-.profile-mark {
-  position: relative;
-  width: clamp(180px, 22vw, 250px);
-  aspect-ratio: 1;
-  display: grid;
-  place-items: center;
-  overflow: hidden;
-  border: 1px solid var(--border);
-  border-radius: 50%;
-  background:
-    linear-gradient(145deg, rgba(255, 255, 255, 0.88), rgba(240, 236, 228, 0.9));
-  box-shadow:
-    0 0 0 10px rgba(255, 255, 255, 0.34),
-    var(--shadow-md);
-}
-
-.profile-mark::before {
-  position: absolute;
-  inset: 16%;
-  border: 1px solid rgba(26, 122, 109, 0.16);
-  border-radius: 50%;
-  content: "";
-}
-
-.profile-mark::after {
-  position: absolute;
-  right: 12%;
-  bottom: 15%;
-  width: 26%;
-  aspect-ratio: 1;
-  border-radius: 50%;
-  background: rgba(26, 122, 109, 0.13);
-  content: "";
-}
-
-.profile-mark span {
-  position: relative;
-  z-index: 1;
-  color: var(--accent);
-  font-family: "Source Serif 4", Georgia, serif;
-  font-size: clamp(1.35rem, 3.2vw, 2.25rem);
-  font-weight: 700;
-  letter-spacing: -0.035em;
 }
 
 .projects {
@@ -379,18 +314,11 @@ footer a {
 
   .hero {
     min-height: 0;
-    grid-template-columns: 1fr;
-    gap: 48px;
     padding: 72px 0 64px;
   }
 
   h1 {
     font-size: clamp(3.5rem, 18vw, 5.5rem);
-  }
-
-  .profile-mark {
-    width: 150px;
-    grid-row: 1;
   }
 
   .projects {
